@@ -1,0 +1,5 @@
+git-archive-all (1.19.4-1) stable; urgency=low
+
+  * source package automatically created by stdeb 0.8.5
+
+ -- Mark A. Hershberger <mah@everybody.org>  Sat, 30 Mar 2019 15:52:52 -0400
