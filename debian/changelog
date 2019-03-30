@@ -1,5 +1,5 @@
-git-archive-all (1.19.4-1) stable; urgency=low
+git-archive-all (1.19.4-1) stretch; urgency=low
 
-  * source package automatically created by stdeb 0.8.5
+  * Closes: #926951
 
  -- Mark A. Hershberger <mah@everybody.org>  Sat, 30 Mar 2019 15:52:52 -0400

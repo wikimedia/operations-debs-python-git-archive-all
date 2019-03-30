@@ -1,0 +1,72 @@
+.TH git-archve-all 1 2019-04-12 Linux "User commands (Programs)"
+
+.SH NAME
+
+git-archive-all \- Archive a git repository with all its submodules
+
+.SH SYNOPSIS
+
+.SY git-archive-all
+.OP \-v
+.OP \-\-prefix=\fIPREFIX\fP
+.OP \-\-no\-exclude
+.OP \-\-force\-submodules
+.OP \-\-dry\-run
+.OP \-\-extra EXTRA1\ EXTRA2\ \.\.\.
+.RI OUTPUT_FILE
+
+.SH DESCRIPTION
+git-archive-all picks up where
+.BR git-archive (1)
+leaves off.  Instead of archiving a single repository, it archives the repository \fIand all its submodules\fP.
+
+This allows you to distribute a single archive with all the dependencies from various git repositories with a single command.
+
+.SH OPTIONS
+.TP
+\fB\-\-version\fR
+Show program's version number and exit.
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+Show this help message and exit.
+
+.TP
+\fB\-v\fR, \fB\-\-verbose\fR
+Enable verbose mode.
+
+.TP
+\fB\-\-prefix=\fIPREFIX\fP
+\fRPrepend \fIPREFIX\fR to each filename in the
+archive.
+
+.TP
+\fB\-\-no-exclude\fR
+Don't read .gitattributes files for patterns containing export-ignore
+attributes.
+
+.TP
+\fB\-\-force-submodules\fR
+Initialize and update submodules for each submodule before continuing.
+
+.TP
+\fB\-\-extra\fR
+Include extra files to the resulting archive.
+
+.TP
+\fB\-\-dry-run\fR
+Don't actually archive anything, just show what would be done.
+
+.TP
+\fIOUTPUT_FILE\fR
+name is used by default to avoid
+tarbomb. You can set it to '' in order to explicitly request tarbomb.
+
+.SH EXCLUDING FILES
+
+Mark paths you want to exclude in the .gitattributes file with the export-ignore attribute. Read more on git-scm.com
+.UR https://git-scm.com/docs/gitattributes#_code_export_ignore_code
+.UE .
+
+.SH SEE ALSO
+.LP
+git-archive(1), gitattributes(5)
